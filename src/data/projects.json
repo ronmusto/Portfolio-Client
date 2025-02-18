@@ -1,0 +1,48 @@
+[
+    {
+      "id": 1,
+      "title": "Real-Time Data Dashboard",
+      "description": "A dashboard displaying live data using APIs, interactive charts, and real-time analytics.",
+      "image": "/images/data-dashboard.png",
+      "link": "#",
+      "tags": ["Data Science", "Visualization", "React", "API Integration"]
+    },
+    {
+      "id": 2,
+      "title": "Resume Keyword Analyzer",
+      "description": "An AI-powered tool that analyzes resumes and suggests keyword optimizations based on job descriptions.",
+      "image": "/images/resume-analyzer.png",
+      "link": "#",
+      "tags": ["Machine Learning", "NLP", "Python", "Flask"]
+    },
+    {
+      "id": 3,
+      "title": "Serverless URL Shortener",
+      "description": "A cloud-based URL shortener with analytics tracking using AWS Lambda and DynamoDB.",
+      "image": "/images/url-shortener.png",
+      "link": "#",
+      "tags": ["Cloud", "Serverless", "AWS", "DynamoDB"]
+    },
+    {
+      "id": 4,
+      "title": "Weather App",
+      "description": "A simple weather app using OpenWeather API.",
+      "image": "/images/weather-app.png",
+      "link": "https://github.com/yourusername/weather-app"
+    },
+    {
+      "id": 5,
+      "title": "Task Manager",
+      "description": "A full-stack task management app with MongoDB.",
+      "image": "/images/task-manager.png",
+      "link": "https://your-live-site.com"
+    },
+    {
+      "id": 6,
+      "title": "AI Chatbot",
+      "description": "A chatbot built with OpenAI's API.",
+      "image": "/images/ai-chatbot.png",
+      "link": "https://github.com/yourusername/ai-chatbot"
+    }
+  ]
+  
