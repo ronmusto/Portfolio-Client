@@ -1,31 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import './Home.css';
-import Weather from './weather';
+import React from "react";
+import Weather from "./Weather";
+import "./Home.css";
 
 function Home() {
-  const [projects, setProjects] = useState([]);
-
-  useEffect(() => {
-    fetch('/data/projects.json')
-      .then(response => response.json())
-      .then(data => setProjects(data))
-      .catch(error => console.error('Error loading projects:', error));
-  }, []);
-
   return (
     <div className="home">
       {/* Hero Section */}
-      <section className="hero">
+      <section className="hero container">
         <h1>Welcome to My Portfolio</h1>
         <p>Hi, I'm Renaldo Musto, a software engineer passionate about building innovative solutions.</p>
         <a href="/about" className="btn">Learn More About Me</a>
       </section>
 
-      {/* Weather Section */}
-      <Weather />
-
       {/* About Section */}
-      <section className="about-preview">
+      <section className="about-preview container">
         <h2>About Me</h2>
         <p>
           I'm a Computer Science graduate with expertise in software engineering, data analysis, and web development. 
@@ -35,7 +23,7 @@ function Home() {
       </section>
 
       {/* Skills Overview */}
-      <section className="skills-overview">
+      <section className="skills-overview container">
         <h2>Technical Skills</h2>
         <div className="skills-grid">
           <div className="skill-card">JavaScript</div>
@@ -48,29 +36,22 @@ function Home() {
       </section>
 
       {/* Portfolio Preview */}
-      <section className="portfolio-preview">
+      <section className="portfolio-preview container">
         <h2>Portfolio</h2>
         <div className="portfolio-grid">
-          {projects.map(project => (
-            <div key={project.id} className="portfolio-item">
-              <img src={project.image} alt={project.title} className="portfolio-image" />
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              <a href={project.link} target="_blank" rel="noopener noreferrer" className="link">
-                View Project
-              </a>
-            </div>
-          ))}
+          <p>Coming soon...</p>
         </div>
-        <a href="/portfolio" className="link">View All Projects</a>
       </section>
 
       {/* Contact Section */}
-      <section className="contact-cta">
+      <section className="contact-cta container">
         <h2>Let's Connect</h2>
         <p>Have a question or want to work together? Feel free to reach out!</p>
         <a href="/contact" className="btn">Contact Me</a>
       </section>
+
+      {/* Weather Section */}
+      <Weather />
     </div>
   );
 }

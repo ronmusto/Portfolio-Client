@@ -8,26 +8,31 @@ function Weather() {
 
   // Fetch weather data from the backend
   const fetchWeather = async () => {
-    setError(""); // Clear previous errors
-
-    if (!city.trim()) {
-      setError("Please enter a city name.");
-      return;
-    }
-
+    const backendUrl = import.meta.env.VITE_BACKEND_URL;
+    const requestUrl = `${backendUrl}/api/weather?city=${city}`;
+    
+    console.log("Fetching from:", requestUrl);
+  
     try {
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/weather?city=${city}`);
-      const data = await response.json();
-
-      if (response.ok) {
-        setWeather(data);
-      } else {
-        setError(data.error || "Failed to fetch weather data.");
-      }
+      const response = await fetch(requestUrl);
+      console.log("Response Status:", response.status);
+      
+      // Read response as text for debugging
+      const text = await response.text();
+      console.log("Raw Response:", text);
+  
+      // Try parsing JSON
+      const data = JSON.parse(text);
+      console.log("Parsed JSON:", data);
+  
+      setWeather(data);
     } catch (err) {
-      setError("Network error. Please try again.");
+      console.error("Fetch error:", err);
+      setError("Network error. Please check your connection.");
     }
   };
+  
+  
 
   return (
     <div className="weather-container">
