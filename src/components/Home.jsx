@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Home.css';
+import Weather from './weather';
 
 function Home() {
   const [projects, setProjects] = useState([]);
@@ -19,6 +20,9 @@ function Home() {
         <p>Hi, I'm Renaldo Musto, a software engineer passionate about building innovative solutions.</p>
         <a href="/about" className="btn">Learn More About Me</a>
       </section>
+
+      {/* Weather Section */}
+      <Weather />
 
       {/* About Section */}
       <section className="about-preview">
