@@ -5,6 +5,23 @@ html, body, #root {
   font-family: Arial, sans-serif;
 }
 
+/* Standardized Section Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Adjusting individual sections */
+.hero,
+.about-preview,
+.skills-overview,
+.portfolio-preview,
+.contact-cta {
+  padding: 60px 20px;
+  text-align: center;
+}
+
 :root {
   --background-color: #ffffff;
   --text-color: #000000;
