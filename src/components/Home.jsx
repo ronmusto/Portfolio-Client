@@ -1,5 +1,4 @@
 import React from "react";
-import Weather from "./Weather";
 import "./Home.css";
 
 function Home() {
@@ -49,9 +48,6 @@ function Home() {
         <p>Have a question or want to work together? Feel free to reach out!</p>
         <a href="/contact" className="btn">Contact Me</a>
       </section>
-
-      {/* Weather Section */}
-      <Weather />
     </div>
   );
 }

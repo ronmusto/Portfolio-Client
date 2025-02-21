@@ -5,44 +5,6 @@ html, body, #root {
   font-family: Arial, sans-serif;
 }
 
-/* Standardized Section Container */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* Adjusting individual sections */
-.hero,
-.about-preview,
-.skills-overview,
-.portfolio-preview,
-.contact-cta {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-:root {
-  --background-color: #ffffff;
-  --text-color: #000000;
-}
-
-body.dark-mode {
-  --background-color: #1c1c1c;
-  --text-color: #e0e0e0;
-}
-
-body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
-body {
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
 .App {
   display: flex;
   flex-direction: column;
@@ -57,14 +19,4 @@ body {
   padding: 1rem 0;
   font-size: 0.9rem;
   margin-top: auto;
-}
-
-/* Links */
-a {
-  color: #61dafb;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
 }

@@ -1,31 +1,18 @@
 .about {
-  font-family: Arial, sans-serif;
-  color: #333;
+  font-family: 'Poppins', sans-serif;
+  color: rgb(0, 0, 0);
   line-height: 1.6;
   max-width: 900px;
   margin: 2rem auto;
   padding: 1rem;
+  text-align: center;
 }
 
 .about-hero {
-  text-align: center;
-  background-color: #1c1c1c;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
   color: white;
-  padding: 2rem 1rem;
+  padding: 3rem 1rem;
   border-radius: 10px;
-}
-
-.about-hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.about-hero p {
-  font-size: 1.2rem;
-}
-
-.about-skills, .about-education, .about-contact {
-  margin: 2rem 0;
 }
 
 .about-skills .skills-grid {
@@ -36,57 +23,20 @@
 }
 
 .skill-card {
-  background-color: #f5f5f5;
+  background: rgba(255, 255, 255, 0.15);
   padding: 1rem;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
+  color: rgb(0, 0, 0);
 }
 
-.skill-card h3 {
-  color: #1c1c1c;
-  margin-bottom: 0.5rem;
-}
-
-.about-education ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.about-education li {
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-}
-
-.about-contact {
-  text-align: center;
-}
-
-.about-contact .btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: #333;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.about-contact .btn:hover {
-  background-color: #555;
-}
-
-body.dark-mode .about-education,
-body.dark-mode .about-skills,
 body.dark-mode .about-hero,
-body.dark-mode .about-contact {
-  color: #0fa0b4; /* Ensure the titles are white in dark mode */
-  font-weight: bold; /* Enhance readability */
+body.dark-mode .skill-card {
+  background: rgba(255, 255, 255, 0.1);
+  color: whitesmoke;
 }
 
-body.dark-mode .skill-card{
-  color: grey
+body.dark-mode .about {
+  color: whitesmoke;
 }
-
-
-

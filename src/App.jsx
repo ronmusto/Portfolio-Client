@@ -6,6 +6,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import About from './components/About.jsx';
 import Contact from './components/Contact.jsx';
+import Dashboard from './components/DataDashboard.jsx';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="*" element={<div>Page Not Found</div>} /> {/* Fallback route */}
         </Routes>
         <Footer />

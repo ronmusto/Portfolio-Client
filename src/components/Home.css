@@ -1,31 +1,62 @@
+/* 
+  HOME.CSS (Rebuilt)
+  ------------------
+  This version uses CSS variables to handle theme changes 
+  and provides consistent contrast for text in both modes. 
+*/
+
+/* 
+  1) Set up default (light) mode values in :root.
+  2) Then override them in body.dark-mode.
+*/
+
+:root {
+  --home-bg-color: #ECECEC;   /* Page background */
+  --home-text-color: #333333; /* Page text color */
+
+  --hero-bg-color: #f7f7f7;   /* Hero background in light mode */
+  --hero-text-color: #111111; /* Hero text in light mode */
+
+  --card-bg-color: #f5f5f5;   /* Skill card / portfolio card background */
+  --card-text-color: #333333; /* Skill card text color */
+}
+
+/* Dark mode overrides */
+body.dark-mode {
+  --home-bg-color: #1c1c1c;   
+  --home-text-color: #f5f5f5;
+
+  --hero-bg-color: #333333;
+  --hero-text-color: #ffffff;
+
+  --card-bg-color: #444444;
+  --card-text-color: #ffffff;
+}
+
+/* 
+  Base .home container 
+  - The background is set to the variable so it can flip 
+  - The text color also flips via the variable 
+*/
 .home {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: #333;
+  background-color: var(--home-bg-color);
+  color: var(--home-text-color);
+  margin: 0;
+  padding: 0;
 }
 
+/* HERO SECTION 
+   By default, the hero has a light background, but in dark mode,
+   it flips to a darker color for better contrast.
+*/
 .hero {
   text-align: center;
-  background-color: #1c1c1c;
-  color: white;
+  background-color: var(--hero-bg-color);
+  color: var(--hero-text-color);
   padding: 3rem 1rem;
 }
-
-/* Improve Skills Grid */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 15px;
-  margin-top: 20px;
-}
-
-/* Improve Portfolio Grid */
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
 
 .hero h1 {
   font-size: 2.5rem;
@@ -37,11 +68,12 @@
   margin-bottom: 2rem;
 }
 
+/* Hero button (light-blue with white text) */
 .hero .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background-color: #61dafb;
-  color: white;
+  background-color: #61dafb; 
+  color: #ffffff;
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
@@ -49,9 +81,10 @@
 }
 
 .hero .btn:hover {
-  background-color: #21a1f1;
+  background-color: #21a1f1; 
 }
 
+/* SHARED SECTIONS */
 .about-preview,
 .skills-overview,
 .portfolio-preview,
@@ -60,16 +93,9 @@
   padding: 2rem 1rem;
 }
 
-body.dark-mode .about-preview,
-body.dark-mode .skills-section-title,
-body.dark-mode .portfolio-section-title,
-body.dark-mode .contact-cta {
-  color: white;
-}
-body.dark-mode .skills-overview h2,
-body.dark-mode .portfolio-preview h2 {
-  color: #ffffff; /* Ensure the titles are white in dark mode */
-  font-weight: bold; /* Enhance readability */
+/* SKILLS SECTION */
+.skills-overview h2 {
+  margin-bottom: 1rem;
 }
 
 .skills-grid {
@@ -79,20 +105,16 @@ body.dark-mode .portfolio-preview h2 {
   margin-top: 1rem;
 }
 
+/* Each skill card uses the card background and text color variables */
 .skill-card {
-  background-color: #f5f5f5;
+  background-color: var(--card-bg-color);
+  color: var(--card-text-color);
   padding: 1rem;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-body.dark-mode .about-section-title h2,
-body.dark-mode .skills-section-title h2,
-body.dark-mode .portfolio-section-title h2,
-body.dark-mode .contact-cta h2 {
- color: white;
-}
-
+/* PORTFOLIO SECTION */
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -101,12 +123,19 @@ body.dark-mode .contact-cta h2 {
 }
 
 .portfolio-item {
-  background-color: #f5f5f5;
+  background-color: var(--card-bg-color);
+  color: var(--card-text-color);
   padding: 1rem;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.portfolio-item h3 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Link styling */
 .link {
   color: #0073e6;
   text-decoration: none;
@@ -118,12 +147,18 @@ body.dark-mode .contact-cta h2 {
 .link:hover {
   text-decoration: underline;
 }
+
+/* CONTACT SECTION CTA */
 .contact-cta .btn {
   background-color: #333;
-  color: white;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
 }
 
 .contact-cta .btn:hover {
   background-color: #555;
 }
-
